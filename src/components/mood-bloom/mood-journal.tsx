@@ -53,9 +53,9 @@ export function MoodJournal() {
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-      <div className="lg:col-span-2">
-        <Card className="shadow-lg">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-8 max-w-7xl mx-auto">
+      <div className="md:col-span-2">
+        <Card className="shadow-lg bg-card/80 backdrop-blur-sm border-border/50 sticky top-8">
           <CardHeader>
             <CardTitle>How are you today?</CardTitle>
             <CardDescription>Record your mood and thoughts.</CardDescription>
@@ -66,9 +66,9 @@ export function MoodJournal() {
         </Card>
       </div>
 
-      <div className="lg:col-span-3">
+      <div className="md:col-span-3">
         <Tabs defaultValue="log" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3">
             <TabsTrigger value="log"><Book className="w-4 h-4 mr-2" />Journal Log</TabsTrigger>
             <TabsTrigger value="trends"><BarChart className="w-4 h-4 mr-2" />Mood Trends</TabsTrigger>
             <TabsTrigger value="insights"><BrainCircuit className="w-4 h-4 mr-2" />AI Insights</TabsTrigger>

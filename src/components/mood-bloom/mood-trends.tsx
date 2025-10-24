@@ -20,7 +20,7 @@ export function MoodTrends({ entries }: MoodTrendsProps) {
   }, [entries]);
 
   return (
-    <Card className="shadow-lg">
+    <Card className="bg-transparent border-0 shadow-none">
       <CardHeader>
         <CardTitle>Mood Trends</CardTitle>
         <CardDescription>Your mood fluctuations over the last 30 entries.</CardDescription>

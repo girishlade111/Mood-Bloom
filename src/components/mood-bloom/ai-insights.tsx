@@ -51,7 +51,7 @@ export function AIInsights({ entries }: AIInsightsProps) {
   };
 
   return (
-    <Card className="shadow-lg">
+    <Card className="bg-transparent border-0 shadow-none">
       <CardHeader>
         <CardTitle>AI-Powered Insights</CardTitle>
         <CardDescription>Discover patterns and reflections from your journal.</CardDescription>

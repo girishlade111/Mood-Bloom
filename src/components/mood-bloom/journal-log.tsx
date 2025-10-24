@@ -24,7 +24,7 @@ export function JournalLog({ entries }: JournalLogProps) {
   );
 
   return (
-    <Card className="shadow-lg">
+    <Card className="bg-transparent border-0 shadow-none">
       <CardHeader>
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
             <div>
@@ -38,7 +38,7 @@ export function JournalLog({ entries }: JournalLogProps) {
                     <Button
                         variant={"outline"}
                         className={cn(
-                        "w-[240px] justify-start text-left font-normal",
+                        "w-full sm:w-[240px] justify-start text-left font-normal",
                         !date && "text-muted-foreground"
                         )}
                     >
@@ -66,12 +66,12 @@ export function JournalLog({ entries }: JournalLogProps) {
                 const moodOption = getMoodOption(entry.mood);
                 const Icon = moodOption?.icon;
                 return (
-                  <Card key={entry.id} className="bg-background/50">
+                  <Card key={entry.id} className="bg-muted/50">
                     <CardContent className="p-4">
                         <div className="flex items-start gap-4">
                             {Icon && <Icon className="w-10 h-10 mt-1 flex-shrink-0" />}
                             <div className="flex-1">
-                                <div className="flex justify-between items-center">
+                                <div className="flex justify-between items-center flex-wrap gap-2">
                                     <p className="font-semibold text-lg">{moodOption?.label}</p>
                                     <p className="text-sm text-muted-foreground">{format(entry.date, 'PPp')}</p>
                                 </div>

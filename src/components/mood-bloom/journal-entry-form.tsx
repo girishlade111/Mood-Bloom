@@ -50,12 +50,12 @@ export function JournalEntryForm({ onAddEntry }: JournalEntryFormProps) {
           name="mood"
           render={({ field }) => (
             <FormItem className="space-y-3">
-              <FormLabel>Select your mood</FormLabel>
+              <FormLabel>How are you feeling?</FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="grid grid-cols-3 sm:grid-cols-5 gap-2"
+                  className="grid grid-cols-5 gap-2"
                 >
                   {moodOptions.map(({ value, label, icon: Icon }) => (
                     <FormItem key={value} className="flex flex-col items-center space-y-2">
@@ -66,7 +66,7 @@ export function JournalEntryForm({ onAddEntry }: JournalEntryFormProps) {
                          htmlFor={value}
                          className={cn(
                            "flex flex-col items-center justify-center rounded-md border-2 border-muted bg-popover p-4 hover:bg-accent hover:text-accent-foreground cursor-pointer w-full aspect-square transition-all",
-                           field.value === value && "border-accent bg-primary shadow-md"
+                           field.value === value && "border-primary bg-primary/20 shadow-md"
                          )}
                        >
                          <Icon className="w-8 h-8 mb-2" />
@@ -85,7 +85,7 @@ export function JournalEntryForm({ onAddEntry }: JournalEntryFormProps) {
           name="notes"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Add descriptive notes</FormLabel>
+              <FormLabel>Add some notes</FormLabel>
               <FormControl>
                 <Textarea rows={4} placeholder="What's on your mind? Activities, thoughts, feelings..." {...field} />
               </FormControl>
